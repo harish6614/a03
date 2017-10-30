@@ -1,0 +1,48 @@
+<% include header %>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button id="menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="glyphicon glyphicon-menu-hamburger"></span> Menu                       
+            </button>
+            <a class="navbar-brand" href="/index">Rent A Car</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="/index">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li class="active"><a href="/guestbook">Guest Book</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+<div class="container-fluid">   
+<% if (entries.length) { %>
+    <h2>
+        Guestbook
+        <a href="/new-entry" class="btn btn-primary pull-right">
+        Write in the guestbook
+        </a>
+    </h2>
+<% entries.forEach(function(entry) { %>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div class="text-muted pull-right">
+<%= entry.published %></div>
+<%= entry.title %></div>
+<div class="panel-body">
+<%= entry.content %>
+</div>
+</div>
+<% }) %>
+<% } else { %>
+    <h2>
+        Guestbook
+    </h2>
+    <h4>No entries! <a href="/new-entry">Add one!</a></h4>
+<% } %>
+</div>
+<% include footer %>

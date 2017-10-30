@@ -1,0 +1,72 @@
+<% include header %>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button id="menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="glyphicon glyphicon-menu-hamburger"></span> Menu                       
+            </button>
+            <a class="navbar-brand" href="/index">Rent A Car</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="/index">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li class="active"><a href="/contact">Contact</a></li>
+              <li><a href="/guestbook">Guest Book</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center"> 
+            <div class="row content">
+                <div class="col-sm-12">
+                  <form class="form-horizontal" id="contactForm" action="contact" method="post">
+                          <fieldset>
+                          
+                          <!-- Form Name -->
+                          <legend>Please fill the below details ans click send</legend>
+                          
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label" for="textinput">Name</label>  
+                            <div class="col-sm-4">
+                            <input id="name" name="name" type="text" placeholder="Name" class="form-control input-sm">
+                            </div>
+                          </div>
+                                                    
+                          <!-- Text input-->
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label" for="email">Email ID</label>  
+                            <div class="col-sm-4">
+                            <input id="email" name="email" type="email" placeholder="email address" class="form-control input-sm">
+                            </div>
+                          </div>
+                          
+                            
+                          <!-- Text input-->
+                          <div class="form-group">
+                              <label class="col-sm-4 control-label" for="message">Message</label>  
+                              <div class="col-sm-4">
+                              <textarea class="form-control  input-sm" id="message" name="message" 
+                              placeholder="Please enter your content." rows="15" required></textarea></div>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label class="col-sm-4 control-label" for="submit"></label>
+                            <div class="col-sm-4">
+                            <input type="submit" class="btn btn-success" value="Send">
+                            <input type="reset" class="btn btn-danger" value="Clear">
+                            </div>
+                          </div>
+          
+                          </fieldset>
+                          </form>
+            </div>
+            
+        </div>
+    </div>    
+    <br>
+
+<% include footer %>

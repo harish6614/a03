@@ -1,0 +1,66 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  #video{
+      height: 350;
+      width: 500;
+  }
+  
+  .social a{
+      text-decoration: none !important;
+  }
+  
+  .image-links{
+      width: 30px;
+      height: 30px;
+      padding: 0.2em;
+  }
+  
+  .profile-image{ 
+      margin: auto;
+      width: 12em;
+      height: 12em;
+      background-image: url('../img/myPic.jpg');
+      background-size: cover;
+      display: block;
+      border-radius: 100px;
+  }
+  
+  #menu {
+      color: #555;
+  }
+  
+  #menu:hover {
+      color: white;
+  }
+  
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: #555;
+      color: white;
+      
+  }
+  
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }

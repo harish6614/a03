@@ -1,0 +1,38 @@
+<% include header %>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button id="menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="glyphicon glyphicon-menu-hamburger"></span> Menu                       
+        </button>
+        <a class="navbar-brand" href="/index">Rent A Car</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/index">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li class="active"><a href="/guestbook">Guest Book</a></li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="container-fluid">    
+<h2>Write a new entry</h2>
+<form method="post" role="form">
+<div class="form-group">
+<label for="title">Title</label>
+<input type="text" class="form-control" id="title"
+  name="title" placeholder="Entry title" required></div>
+
+<div class="form-group">
+<label for="content">Entry text</label>
+<textarea class="form-control" id="body" name="body"
+placeholder="Please enter your experience." rows="3" required></textarea></div>
+
+<div class="form-group">
+<input type="submit" value="Post entry" class="btn btn-primary"></div>
+</form>
+</div>
+<% include footer %>

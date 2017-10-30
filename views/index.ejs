@@ -1,0 +1,124 @@
+<% include header %>
+<script src="js/main.js"></script>
+
+     <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button id="menu" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="glyphicon glyphicon-menu-hamburger"></span> Menu                       
+            </button>
+            <a class="navbar-brand" href="/index">Rent A Car</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/index">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/guestbook">Guest Book</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<div class="container-fluid text-center">    
+        <div class="row content">
+              <form class="form-horizontal" id="details" onsubmit="return validateForm()" method="get">
+                      <fieldset>
+                      
+                      <!-- Form Name -->
+                      <legend>Rent a Car : Please fill the below details</legend>
+                      
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="textinput">First Name</label>  
+                        <div class="col-sm-4">
+                        <input id="fname" type="text" placeholder="First Name" class="form-control input-sm" required>
+                        </div>
+                      </div>
+                      
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="textinput">Last Name</label>  
+                        <div class="col-sm-4">
+                        <input id="lname" type="text" placeholder="Last Name" class="form-control input-sm" required>
+                        </div>
+                      </div>
+                      
+                      <!-- Multiple Radios (inline) -->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="Gender">Gender</label>
+                        <div class="col-sm-4"> 
+                          <label class="radio-inline" for="Gender-0">
+                            <input type="radio" name="Gender" id="gender" value="Male" checked="checked">
+                            Male
+                          </label> 
+                          <label class="radio-inline" for="Gender-1">
+                            <input type="radio" name="Gender" id="gender" value="Female">
+                            Female
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="email">Email ID</label>  
+                        <div class="col-sm-4">
+                        <input id="email" type="email" placeholder="Email ID" class="form-control input-sm" required>
+                        </div>
+                      </div>
+      
+                      <!-- Select Basic -->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="Vehicle Type">Vehicle Type</label>
+                        <div class="col-sm-4">
+                          <select id="vehicleType" name="Vehicle Type" class="form-control" required>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Station wagon">Station wagon</option>
+                            <option value="Hatchback">Hatchback</option>
+                            <option value="Minivan">Minivan</option>
+                          </select>
+                        </div>
+                      </div>
+                      
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="fromDate">From Date</label>  
+                        <div class="col-sm-4">
+                        <input id="fromDate" type="date" class="form-control input-sm" required>
+                        </div>
+                      </div>
+                      
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="toDate">To Date</label>  
+                        <div class="col-sm-4">
+                        <input id="toDate" type="date" class="form-control input-sm" required>
+                        </div>
+                      </div>
+                      
+                      <!-- Text input-->
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="age">Age</label>  
+                        <div class="col-sm-4">
+                        <input id="age" type="number" class="form-control input-sm" required>
+                        </div>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="col-sm-4 control-label" for="submit"></label>
+                        <div class="col-sm-4">
+                        <input type="submit" class="btn btn-success" value="Book">
+                        <input type="reset" class="btn btn-danger" value="Clear">
+                        </div>
+                      </div>
+      
+                      </fieldset>
+                      </form>
+                      
+        </div>
+        <br>
+        <div>
+          <span id="result" class="result"></span>
+        </div>
+      </div>
+<% include footer %>

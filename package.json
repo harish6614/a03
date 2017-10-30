@@ -1,0 +1,20 @@
+{   "name": "a03",
+    "version": "0.0.1",
+    "description": "personal website",
+    "main": "server.js",
+    "dependencies": {
+        "express": "latest",
+        "morgan": "latest",
+        "body-parser": "latest",
+        "ejs": "latest",
+        "nodemailer": "latest",
+        "xoauth2": "latest"
+    },
+    "author": "Harish Bondalapati",
+    "homepage": "https://github.com/harish6614/a03",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/harish6614/a03"
+    },
+     "license": "Apache-2.0"
+}
